@@ -4,39 +4,45 @@
       "light": "/logo/light.svg",
       "dark": "/logo/dark.svg"
     },
-    "favicon": "/favicon.png",
+    "favicon": "/favicon.svg",
     "colors": {
-      "primary": "#",
-      "light": "#",
-      "dark": "#"
+      "primary": "#3679FF",
+      "light": "#5E94FF",
+      "dark": "#3679FF"
     },
     "topbarCtaButton": {
-      "name": "",
-      "url": ""
+      "name": "Contact Support",
+      "url": "https://galxe.com/support"
     },
-    "topbarLinks": [
-      {
-        "name": "",
-        "url": ""
-      }
-    ],
     "anchors": [
       {
-        "name": "",
-        "icon": "",
-        "url": ""
+        "name": "App",
+        "icon": "window",
+        "url": "https://galxe.com/"
+      },
+      {
+        "name": "Help Center",
+        "icon": "block-question",
+        "url": "https://help.galxe.com/en/"
       }
     ],
     "navigation": [
       {
-        "group": "",
-        "pages": [""]
+        "group": "Into the Galxe",
+        "pages": [
+          "introduction",
+          "into-the-galxe/credential-data-network",
+          "into-the-galxe/build-with-credentials",
+          "into-the-galxe/galxe-id",
+          "into-the-galxe/galxe-oat",
+          "into-the-galxe/galxe-passport"
+        ]
       }
     ],
     "footerSocials":
       {
-          "twitter": "",
-          "linkedin": ""
+          "twitter": "https://twitter.com/Galxe?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor",
+          "linkedin": "https://www.linkedin.com/company/galxe/"
       }
   }
   
