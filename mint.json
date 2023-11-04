@@ -14,6 +14,15 @@
       "name": "Contact Support",
       "url": "https://galxe.com/support"
     },
+    "primaryTab": {
+      "name": "Overview"
+    },
+    "tabs": [
+      {
+          "name": "Developers",
+          "url": "developer"
+      }
+  ],
     "anchors": [
       {
         "name": "App",
@@ -30,12 +39,97 @@
       {
         "group": "Into the Galxe",
         "pages": [
-          "introduction",
-          "into-the-galxe/credential-data-network",
-          "into-the-galxe/build-with-credentials",
-          "into-the-galxe/galxe-id",
-          "into-the-galxe/galxe-oat",
-          "into-the-galxe/galxe-passport"
+          "overview/introduction",
+          "overview/into-the-galxe/credential-data-network",
+          "overview/into-the-galxe/build-with-credentials",
+          "overview/into-the-galxe/galxe-id",
+          "overview/into-the-galxe/galxe-oat",
+          "overview/into-the-galxe/galxe-passport"
+        ]
+      },
+      {
+        "group": "The GAL Token",
+        "pages": [
+          "overview/the-GAL-token/GAL-Token",
+          "overview/the-GAL-token/GAL-Early-Adopter-Rewards"
+        ]
+      },
+      {
+        "group": "Community Programs",
+        "pages": [
+          "overview/community-programs/Galaxy-Brain",
+          "overview/community-programs/Galaxy-Pathfinder",
+          "overview/community-programs/Galaxy-Ecosystem-Space"
+        ]
+      },
+      {
+        "group": "Case Studies",
+        "pages": [
+          "overview/case-studies/ProtocolGrowthOdos",
+          "overview/case-studies/JoepegsCaseStudy",
+          "overview/case-studies/pSTAKEGalxeCaseStudy",
+          "overview/case-studies/ecosystem-campaign-optimism",
+          "overview/case-studies/DEXGrowthWithHashflow",
+          "overview/case-studies/CustomizedGovernanceWithBNBChain",
+          "overview/case-studies/thedefiantemailclaiming",
+          "overview/case-studies/EcosystemGrowthWithSolana",
+          "overview/case-studies/EndOfYearRave",
+          "overview/case-studies/NFTMarketplaceGrowth",
+          "overview/case-studies/CommunityEngagementWithImToken",
+          "overview/case-studies/GrowthHackingWithMintverse",
+          "overview/case-studies/LoyaltyProgramWithZk.Link",
+          "overview/case-studies/ShadowySuperCoder",
+          "overview/case-studies/LearnToEarnWithCoinGecko",
+          "overview/case-studies/PoolTogetherSeason1",
+          "overview/case-studies/CoinList",
+          "overview/case-studies/web3onbnb",
+          "overview/case-studies/P12",
+          "overview/case-studies/TheLinsanityCampaign"
+        ]
+      },
+      {
+        "group": "Change Logs",
+        "pages": [
+          "overview/change-logs/changelogs"
+        ]
+      },
+      {
+        "group": "Getting Started",
+        "pages": [
+          "developer/introduction"
+        ]
+      },
+      {
+        "group": "Smart Contract",
+        "pages": [
+          "developer/smart-contract/introduction",
+          "developer/smart-contract/audit",
+          "developer/smart-contract/subgraph"
+        ]
+      },
+      {
+        "group": "Galxe ID Integration",
+        "pages": [
+          "developer/galxe-id-integration/galxe-id-oauth",
+          "developer/galxe-id-integration/galxe-passport"
+        ]
+      },
+      {
+        "group": "Credential API",
+        "pages": [
+          "developer/credential-api/api-cred-items-update",
+          "developer/credential-api/rest-cred",
+          "developer/credential-api/subgraph-cred"
+        ]
+      },
+      {
+        "group": "Public GraphQL API",
+        "pages": [
+          "developer/graphql-api/overview",
+          "developer/graphql-api/rate-limit",
+          "developer/graphql-api/api-examples",
+          "developer/graphql-api/claim-integrate",
+          "developer/graphql-api/claim-galxe-nft"
         ]
       }
     ],
