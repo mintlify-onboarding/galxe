@@ -1,5 +1,5 @@
 ---
-title: "1. Introduction2. API reference"
+title: "Integrate claim API"
 ---
 
 ## 1.1\. Entities Diagram[](#11-entities-diagram "Direct link to heading")
@@ -127,7 +127,7 @@ query {
 
 ### 2.2.4\. **Query example**[](#224-query-example "Direct link to heading")
 
-```
+```graphql
 query {
   campaign(id: "GCqBzUtW7w") {
     numberID
@@ -189,7 +189,7 @@ query {
 
 ### 2.2.5\. **Response example**[](#225-response-example "Direct link to heading")
 
-```
+```json
 {
   "data": {
     "campaign": {
@@ -271,7 +271,7 @@ query {
 
 ### 2.3.1\. query credential info[](#231-query-credential-info "Direct link to heading")
 
-```
+```graphql
 query {
   credential(id:220244101447720960){
     name
@@ -303,7 +303,7 @@ query {
 
 ### 2.3.3\. check address eligiblilty[](#233-check-address-eligiblilty "Direct link to heading")
 
-```
+```grapql
 query {
   credential(id:220244101447720960){
     eligible(address:"0xBb3A7bc36b5baFa7691Ccb708EbF299B6d521b01")
@@ -323,7 +323,7 @@ query {
 
 ### 2.3.4\. check address eligiblilty(verify button)[](#234-check-address-eligibliltyverify-button "Direct link to heading")
 
-```
+```grapql
 mutation {
   verifyCredential(input:{
     credId:220244101447720960
@@ -346,7 +346,7 @@ This API send the request for minting a NFT once user claim, our backend will ev
 
 ### 2.4.1\. M**utation**[](#241-mutation "Direct link to heading")
 
-```
+```graphql
 mutation {
   prepareParticipate
 }
@@ -373,7 +373,7 @@ mutation {
 
 ### 2.4.4\. **Query example**[](#244-query-example "Direct link to heading")
 
-```
+```graphql
 mutation {
   prepareParticipate(input: {
     signature: ""
@@ -393,7 +393,7 @@ mutation {
 
 ### 2.4.5\. **Response example**[](#245-response-example "Direct link to heading")
 
-```
+```json
 {
   "data": {
     "prepareParticipate": {
@@ -439,7 +439,7 @@ query {
 
 ### 2.5.4\. **Query example**[](#254-query-example "Direct link to heading")
 
-```
+```graphql
 query {
   participations(id:[53936841]) {
     tx
@@ -461,7 +461,7 @@ query {
 
 ### 2.5.5\. **Response example**[](#255-response-example "Direct link to heading")
 
-```
+```json
 {
   "data": {
     "participations": [

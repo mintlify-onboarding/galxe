@@ -2,9 +2,9 @@
 title: "Claim Galxe NFT"
 ---
 
- ⚠️ Didn’t support Forge and Solana chain Campaign
+<Warning>Didn’t support Forge and Solana chain Campaign</Warning>
 
- ⚠️ Claim api requires recaptcha by default, if you want to integrate, please contact Galxe.
+<Warning>Claim api requires recaptcha by default, if you want to integrate, please contact Galxe.</Warning>
 
 ## Claim OAT:[](#claim-oat "Direct link to heading")
 
@@ -18,7 +18,7 @@ Use GraphQL API get campaign info
 
 Request args:
 
-```
+```graphql
 mutation claim {
   prepareParticipate(input: {
     signature:  ""            # keep empty
@@ -34,7 +34,7 @@ mutation claim {
 
 Response: claim success
 
-```
+```json
 {
   "data": {
     "prepareParticipate": {
@@ -64,7 +64,7 @@ Call SpaceStation.campaignFeeConfigs
 
 Request args:
 
-```
+```graphql
 mutation claim {
   prepareParticipate(input: {
     signature: ""            # keep empty
@@ -88,7 +88,7 @@ mutation claim {
 
 Response:
 
-```
+```json
 {
   "data": {
     "prepareParticipate": {
@@ -121,7 +121,7 @@ Campaign: [](https://galxe.com/Yuliverse/campaign/GCHYwUwEPU)[https://galxe.com/
 * no ERC20 fee
 * no ETH fee
 
-```
+```graphql
 // spacestation contract
 claim(
     8244, 
@@ -144,7 +144,7 @@ Campaign:
 * no ERC20 fee
 * no ETH fee
 
-```
+```graphql
 // spacestation contract
 claimCapped(
     499, 
@@ -266,7 +266,7 @@ function numMinted(uint256 cid) returns (uint256)
 
 ### SpaceStation Contract ABI:[](#spacestation-contract-abi "Direct link to heading")
 
-```
+```json
 [
    {
       "anonymous":false,

@@ -107,7 +107,7 @@ The expression is a JavaScript (ES6) function of type signature: `(object) => in
 
 **Expression**
 
-```
+```java
 function(resp) {
   if (resp.data.items != null && resp.data.items.length > 0) {
     return 1
@@ -153,7 +153,7 @@ Ethereum Balancer ($ETH Balance > 0)
 
 **Post Body**
 
-```
+```json
 {
     "jsonrpc": "2.0",
     "method": "eth_getBalance",
@@ -168,7 +168,7 @@ Ethereum Balancer ($ETH Balance > 0)
 
 **Query Output**
 
-```
+```json
 {
     "jsonrpc": "2.0",
     "id": 1,
@@ -179,7 +179,7 @@ Ethereum Balancer ($ETH Balance > 0)
 
 **Expression**
 
-```
+```java
 function(resp) {
   if (BigInt(resp.result) > 0) {
     return 1
@@ -201,7 +201,7 @@ Hold at least 1 NFT of contract 0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB, veri
 
 **Post Body**
 
-```
+```json
 {
    "jsonrpc":"2.0",
    "id":1,
@@ -219,7 +219,7 @@ Hold at least 1 NFT of contract 0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB, veri
 
 **Query Output**
 
-```
+```json
 {
     "jsonrpc": "2.0",
     "id": 1,
@@ -230,7 +230,7 @@ Hold at least 1 NFT of contract 0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB, veri
 
 **Expression**
 
-```
+```java
 function(resp) {
   if (BigInt(resp.result) > 0) {
     return 1

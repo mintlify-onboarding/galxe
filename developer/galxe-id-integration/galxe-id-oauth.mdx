@@ -1,5 +1,6 @@
 ---
 title: "Galxe ID OAuth 2.0"
+sidebarTitle: "OAuth 2.0"
 ---
 
 ## Demo[](#demo "Direct link to heading")
@@ -80,13 +81,13 @@ Exchange this `code` for an access token.
 
 #### URL[](#url-1 "Direct link to heading")
 
-```
+```bash
 Content-Type:application/x-www-form-urlencoded
 POST https://api.galxe.com/oauth/auth/2/token
 
 ```
 
-```
+```bash
 curl -d 'client_id=${CLIENT-ID}&client_secret=${CLIENT-SECRET}&code=${CODE}&grant_type=authorization_code' -H "Content-Type:application/x-www-form-urlencoded" -X POST https://api.galxe.com/oauth/auth/2/token
 
 ```
@@ -104,7 +105,7 @@ curl -d 'client_id=${CLIENT-ID}&client_secret=${CLIENT-SECRET}&code=${CODE}&gran
 
 By default, the response takes the following form:
 
-```
+```json
 {
   "access_token": "OTJLYTIWNMQTYJY1ZC0ZOGQ2LTGYMDITNWQXZWJKNTA4YZAA",
   "expires_in": 86400,
@@ -119,13 +120,13 @@ By default, the response takes the following form:
 
 #### URL[](#url-2 "Direct link to heading")
 
-```
+```bash
 Content-Type:application/x-www-form-urlencoded
 POST https://api.galxe.com/oauth/auth/2/token
 
 ```
 
-```
+```bash
 curl -d 'grant_type=refresh_token&refresh_token=${REFRESH-TOKEN}&client_id=${CLIENT-ID}&client_secret=${CLIENT-SECRET}' -H "Content-Type:application/x-www-form-urlencoded" -X POST https://api.galxe.com/oauth/auth/2/token
 
 ```
@@ -141,7 +142,7 @@ curl -d 'grant_type=refresh_token&refresh_token=${REFRESH-TOKEN}&client_id=${CLI
 
 #### Response[](#response-2 "Direct link to heading")
 
-```
+```json
 {
   "access_token": "NTLMMJKYMMQTZJZJYI0ZZGFLLWE5NZMTMZAZMDY3YWMWNMI4",
   "expires_in": 86400,
@@ -156,13 +157,13 @@ curl -d 'grant_type=refresh_token&refresh_token=${REFRESH-TOKEN}&client_id=${CLI
 
 #### URL[](#url-3 "Direct link to heading")
 
-```
+```bash
 Authorization: Bearer ${ACCESS-TOKEN}
 GET https://api.galxe.com/oauth/api/2/token
 
 ```
 
-```
+```bash
 curl -H "Authorization: Bearer ${ACCESS-TOKEN}" https://api.galxe.com/oauth/api/2/token
 
 ```
@@ -175,7 +176,7 @@ curl -H "Authorization: Bearer ${ACCESS-TOKEN}" https://api.galxe.com/oauth/api/
 
 #### Response[](#response-3 "Direct link to heading")
 
-```
+```json
 {
   "client_id": "client_id",
   "expires_at": "2022-08-31 16:00:22.666401 +0800 CST",
@@ -194,7 +195,7 @@ GET https://api.galxe.com/oauth/api/2/user
 
 ```
 
-```
+```bash
 curl -H "Authorization: Bearer ${ACCESS-TOKEN}" https://api.galxe.com/oauth/api/2/user?scope=Twitter%20Discord
 
 ```
@@ -208,7 +209,7 @@ curl -H "Authorization: Bearer ${ACCESS-TOKEN}" https://api.galxe.com/oauth/api/
 
 #### Response[](#response-4 "Direct link to heading")
 
-```
+```json
 {
   "TwitterUsername": "twitter_username",
   "TwitterUserID": "twitter_userid",

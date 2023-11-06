@@ -1,8 +1,7 @@
 ---
 title: "ExamplesSpace Access:Open Access:"
+description: "For more information on our GraphQL endpoint, please refer to [this doc](/developer/graphql-api/overview)."
 ---
-
-For more information on our GraphQL endpoint, please refer to [this doc](/developer/graphql-api/overview).
 
 ## Campaign[](#campaign "Direct link to heading")
 
@@ -18,7 +17,7 @@ Arguments:
 
 Request:
 
-```
+```graphql
 query campaignParticipants($id: ID!, $pfirst: Int!, $pafter: String!) {
   campaign(id: $id) {
     id
@@ -46,7 +45,7 @@ query campaignParticipants($id: ID!, $pfirst: Int!, $pafter: String!) {
 
 Variables:
 
-```
+```json
 {
   "id": "GCn45UjHXE",
   "pfirst": 1,
@@ -57,7 +56,7 @@ Variables:
 
 Response:
 
-```
+```json
 {
   "data": {
     "campaign": {
@@ -100,7 +99,7 @@ Arguments:
 
 Request:
 
-```
+```graphql
 query NFTHolders($id: ID!, $block: Int!, $first: Int!, $after: String!) {
   campaign(id: $id) {
     nftHolderSnapshot{
@@ -132,7 +131,7 @@ query NFTHolders($id: ID!, $block: Int!, $first: Int!, $after: String!) {
 
 Variables:
 
-```
+```json
 {
   "id": "GCCw3UD1eD",
   "block": 47291627,
@@ -144,7 +143,7 @@ Variables:
 
 Response:
 
-```
+```json
 {
   "data": {
     "campaign": {
@@ -190,7 +189,7 @@ Arguments:
 
 Request:
 
-```
+```graphql
 mutation addCampaign($input: MutateCampaignInput!) {
   campaign(input: $input) {
     id
@@ -204,7 +203,7 @@ mutation addCampaign($input: MutateCampaignInput!) {
 
 Variables:
 
-```
+```json
 {
   "input": {
     "daoId": 2,
@@ -266,7 +265,7 @@ Variables:
 
 Response:
 
-```
+```json
 {
   "data": {
     "campaign": {
@@ -286,7 +285,7 @@ Use GraphQL API get campaign info
 
 Request:
 
-```
+```graphql
 mutation claim {
   prepareParticipate(input: {
     signature:  ""            # keep empty
@@ -302,7 +301,7 @@ mutation claim {
 
 Response:
 
-```
+```json
 {
   "data": {
     "prepareParticipate": {
@@ -330,7 +329,7 @@ Request:
 
 args:campaigns:[CampaignConnection](/developer/graphql-api/references/objects/campaign-connection)
 
-```
+```graphql
 query CampaignList($id: Int, $alias: String,  $campaignInput: ListCampaignInput!) {
     space(id: $id, alias: $alias) {
         id
@@ -353,7 +352,7 @@ query CampaignList($id: Int, $alias: String,  $campaignInput: ListCampaignInput!
 
 Variables:
 
-```
+```json
 {
   "alias": "bnbchain",
   "campaignInput": {
@@ -394,7 +393,7 @@ Variables:
 
 Response:
 
-```
+```json
 {
   "data": {
     "space": {
@@ -435,7 +434,7 @@ Arguments:
 
 Request:
 
-```
+```graphql
 query nftHolders($address: String!, $first: Int!, $after: String!) {
   nftCore(address: $address) {
     holders(first: $first, after: $after) {
@@ -457,7 +456,7 @@ query nftHolders($address: String!, $first: Int!, $after: String!) {
 
 Variables:
 
-```
+```json
 {
   "address": "0x9d3895D07bF07A791Ef8d015Ab10997D22179E5c",
   "first": 2,
@@ -468,7 +467,7 @@ Variables:
 
 Response:
 
-```
+```graphql
 {
   "data": {
     "nftCore": {
@@ -511,7 +510,7 @@ Arguments:
 
 Request:
 
-```
+```graphql
 query SpaceLeaderboard($id: Int!, $first: Int, $after: String, $order: LoyaltyPointsRankOrder, $seasonId: Int) {
     space(id: $id) {
         id
@@ -551,7 +550,7 @@ query SpaceLeaderboard($id: Int!, $first: Int, $after: String, $order: LoyaltyPo
 
 Variables:
 
-```
+```json
 {
   "id": 40,
   "first": 2,
@@ -564,7 +563,7 @@ Variables:
 
 Response:
 
-```
+```json
 {
   "data": {
     "space": {
@@ -639,7 +638,7 @@ Arguments:
 
 Request:
 
-```
+```graphql
 query SpaceLeaderboard($id: Int!, $first: Int, $after: String, $order: LoyaltyPointsRankOrder, $seasonId: Int) {
     space(id: $id) {
         id
@@ -679,7 +678,7 @@ query SpaceLeaderboard($id: Int!, $first: Int, $after: String, $order: LoyaltyPo
 
 Variables:
 
-```
+```json
 {
   "id": 40,
   "first": 2,
@@ -692,7 +691,7 @@ Variables:
 
 Response:
 
-```
+```json
 {
   "data": {
     "space": {
@@ -757,7 +756,7 @@ Response:
 
 Prerequisite: generate an access token
 
-```
+```graphql
 mutation UpdateAccessToken($input: UpdateAccessTokenInput!) {
   updateAccessToken(input: $input) {
     accessToken
@@ -766,7 +765,7 @@ mutation UpdateAccessToken($input: UpdateAccessTokenInput!) {
 
 ```
 
-```
+```json
 {
   "input": {
     "address": "0x39b36ff83b60eb54d71758cffa3ab17d2d0b216c"
@@ -775,7 +774,7 @@ mutation UpdateAccessToken($input: UpdateAccessTokenInput!) {
 
 ```
 
-```
+```json
 {
     "data": {
         "updateAccessToken": {
@@ -799,7 +798,7 @@ Header:
 
 Request:
 
-```
+```graphql
 mutation createTask {
   createTailoredTask(input: {
     title: "Connect to Galxe"
@@ -825,7 +824,7 @@ mutation createTask {
 
 Response
 
-```
+```json
 {
   "data": {
     "createTailoredTask": {
@@ -856,7 +855,7 @@ Header:
 
 Request:
 
-```
+```graphql
 mutation updateTask {
   updateTailoredTask(input: {
     id: 26
@@ -873,7 +872,7 @@ mutation updateTask {
 
 Response:
 
-```
+```json
 {
   "data": {
     "updateTailoredTask": true
@@ -906,7 +905,7 @@ Distributing Points via API
 
 Request:
 
-```
+```graphql
 mutation {
   claimTailoredTaskLoyaltyPoints(
       id: 25,
@@ -917,7 +916,7 @@ mutation {
 
 Response:
 
-```
+```json
 {
   "data": {
     "claimTailoredTaskLoyaltyPoints": true
@@ -939,7 +938,7 @@ Header:
 
 ```
 
-```
+```graphql
 query CredItems($id: ID!, $first: Int, $after: String, $searchString: String) {
   credential(id: $id) {
     id
@@ -968,7 +967,7 @@ example variables:
 
 ### Query profile and credential[](#query-profile-and-credential "Direct link to heading")
 
-```
+```graphql
 query ProfileCredentials($address: String!, $first: Int, $after: String) {
   addressInfo(address: $address) {
     addressEligibleCredentials(first: $first, after: $after) {
@@ -995,7 +994,7 @@ Depends on `credSource`, metadata field should use corresponding field.
 
 E.g. if `credSource` is `SPACE_USER`, then the query should look like the following:
 
-```
+```graphql
 query credential($id: ID!, $eligibleAddress: String!) {
   credential(id: $id, eligibleAddress: $eligibleAddress) {
     name
@@ -1058,7 +1057,7 @@ Arguments:
 
 Request:
 
-```
+```graphql
 query campaignParticipants($id: ID!, $pfirst: Int!, $pafter: String!) {
   campaign(id: $id) {
     id
@@ -1097,7 +1096,7 @@ Variables:
 
 Response:
 
-```
+```json
 {
   "data": {
     "campaign": {
@@ -1145,7 +1144,7 @@ args:
 
 campaigns:[CampaignConnection](/developer/graphql-api/references/objects/campaign-connection)
 
-```
+```graphql
 query CampaignList($id: Int, $alias: String,  $campaignInput: ListCampaignInput!) {
     space(id: $id, alias: $alias) {
         id
@@ -1168,7 +1167,7 @@ query CampaignList($id: Int, $alias: String,  $campaignInput: ListCampaignInput!
 
 Variables:
 
-```
+```json
 {
   "alias": "bnbchain",
   "campaignInput": {
@@ -1209,7 +1208,7 @@ Variables:
 
 Response:
 
-```
+```json
 {
   "data": {
     "space": {
@@ -1254,7 +1253,7 @@ Arguments:
 
 Request:
 
-```
+```graphql
 query SpaceLeaderboard($id: Int!, $first: Int, $after: String, $order: LoyaltyPointsRankOrder, $seasonId: Int) {
     space(id: $id) {
         id
@@ -1294,7 +1293,7 @@ query SpaceLeaderboard($id: Int!, $first: Int, $after: String, $order: LoyaltyPo
 
 Variables:
 
-```
+```json
 {
   "id": 40,
   "first": 2,
@@ -1307,7 +1306,7 @@ Variables:
 
 Response:
 
-```
+```json
 {
   "data": {
     "space": {

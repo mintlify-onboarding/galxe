@@ -1,8 +1,7 @@
 ---
 title: "Use API to update credential Items"
+description: "API credential allows you to push credential data to Galxe for your users."
 ---
-
-API credential allows you to push credential data to Galxe for your users.
 
 ## Prerequisite[](#prerequisite "Direct link to heading")
 
@@ -27,7 +26,7 @@ NOTE: Always retry when any error is returned. See below example of how to check
 
 ### GraphQL[](#graphql "Direct link to heading")
 
-```
+```cs
 mutation {
   credentialItems(
     input: {
@@ -56,7 +55,7 @@ mutation {
 
 ### Node.js[](#nodejs "Direct link to heading")
 
-```
+```java
 const credId = "123";
 const operation = "APPEND";
 const items = ["0x123"];

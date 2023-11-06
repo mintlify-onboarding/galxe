@@ -50,7 +50,7 @@ https://api.thegraph.com/subgraphs/name/hyd628/nomad-and-connext
 
 ### Query[](#query-1 "Direct link to heading")
 
-```
+```java
 query info($address: String!) {
   receiveds(
     where: {
@@ -75,7 +75,7 @@ query info($address: String!) {
 
 ### Query output[](#query-output "Direct link to heading")
 
-```
+```json
 {
   "receiveds": [
     {
@@ -89,7 +89,7 @@ query info($address: String!) {
 
 ### Expression[](#expression-1 "Direct link to heading")
 
-```
+```java
 function(resp) {
   if (resp != null && (resp.fulfilleds != null && resp.fulfilleds.length > 0 || resp.receiveds != null && resp.receiveds.length > 0)) {
      return 1

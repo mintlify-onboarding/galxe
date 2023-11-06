@@ -103,6 +103,13 @@
         "group": "Smart Contract",
         "pages": [
           "developer/smart-contract/introduction",
+          {
+            "group": "Contracts",
+            "pages": [
+              "developer/smart-contract/contracts/starnft",
+              "developer/smart-contract/contracts/spacestation"
+            ]
+          },
           "developer/smart-contract/audit",
           "developer/smart-contract/subgraph"
         ]
