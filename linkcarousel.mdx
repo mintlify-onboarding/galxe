@@ -1,14 +1,16 @@
 ---
-title: "CampaignCarousel"
+title: "LinkCarousel"
 ---
 
 No description
 
 ```
-type CampaignCarousel implements Carousel {
+type LinkCarousel implements Carousel {
   objectType: CarouselObjectType!
   objectID: Int!
-  object: Campaign!
+  title: String!
+  image: String!
+  url: String!
 }
 
 ```
@@ -19,7 +21,11 @@ type CampaignCarousel implements Carousel {
 
 #### `objectID` ([Int](/developer/graphql-api/references/scalars/int))[](#objectid-int "Direct link to heading")
 
-#### `object` ([Campaign](/developer/graphql-api/references/objects/campaign))[](#object-campaign "Direct link to heading")
+#### `title` ([String](/developer/graphql-api/references/scalars/string))[](#title-string "Direct link to heading")
+
+#### `image` ([String](/developer/graphql-api/references/scalars/string))[](#image-string "Direct link to heading")
+
+#### `url` ([String](/developer/graphql-api/references/scalars/string))[](#url-string "Direct link to heading")
 
 ### Interfaces[](#interfaces "Direct link to heading")
 
